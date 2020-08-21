@@ -1,0 +1,20 @@
+{
+  "employees": [
+    {
+      "name": "HIMANSHU SINGH",
+      "compName": "Mindtree Ltd",
+      "emailId": "himanshu1195@gmail.com",
+      "contactNo": "9038727025",
+      "designation": "SSE",
+      "id": 1
+    },
+    {
+      "name": "Sudhanshu Singh",
+      "compName": "Cognizant",
+      "emailId": "sud.is..back@gmail.com",
+      "contactNo": "9038727025",
+      "designation": "SSE",
+      "id": 2
+    }
+  ]
+}
