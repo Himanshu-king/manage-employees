@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Employee } from "./employees";
+import { Employee } from './employees';
 
-import { throwError, Observable, of } from "rxjs";
-import { catchError } from "rxjs/operators";
+import { throwError, Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class SharedService {
   apiURL = 'http://localhost:3000';
@@ -20,7 +20,7 @@ export class SharedService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }
+  };
 
   getEmployeesList(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.apiURL + '/employees').pipe(
@@ -36,7 +36,7 @@ export class SharedService {
     return this.http.get<Employee>(this.apiURL + '/employees/' + id)
       .pipe(
         catchError(this.handleError)
-      )
+      );
   }
 
   // HttpClient API post() method => Create employee
@@ -44,7 +44,7 @@ export class SharedService {
     return this.http.post<Employee>(this.apiURL + '/employees', JSON.stringify(employee), this.httpOptions)
       .pipe(
         catchError(this.handleError)
-      )
+      );
   }
 
   // HttpClient API put() method => Update employee
@@ -52,7 +52,7 @@ export class SharedService {
     return this.http.put<Employee>(this.apiURL + '/employees/' + id, JSON.stringify(employee), this.httpOptions)
       .pipe(
         catchError(this.handleError)
-      )
+      );
   }
 
   // HttpClient API delete() method => Delete employee
@@ -60,7 +60,7 @@ export class SharedService {
     return this.http.delete<Employee>(this.apiURL + '/employees/' + id, this.httpOptions)
       .pipe(
         catchError(this.handleError)
-      )
+      );
   }
 
   set EmployeesList(employees) {

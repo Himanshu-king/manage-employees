@@ -1,0 +1,44 @@
+<div class="wrapper details-container">
+  <div class="details-header">
+    <h2>{{ pageTitle }}</h2>
+  </div>
+  <div *ngIf="empData" class="details-body">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3">Name:</div>
+          <div class="col-md-6">{{ empData.name }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Company Name:</div>
+          <div class="col-md-6">{{ empData.compName }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Email ID:</div>
+          <div class="col-md-6">{{ empData.emailId }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Contact No:</div>
+          <div class="col-md-6">{{ empData.contactNo }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Designation:</div>
+          <div class="col-md-6">{{ empData.designation }}</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <ngx-avatar class="my-avatar" size="100" name="{{ empData.name }}"> </ngx-avatar>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <button class="btn btn-primary mr-3" [routerLink]="['/']">
+          <i class="fa fa-chevron-left"></i> Back
+        </button>
+        <button class="btn btn-primary" [routerLink]="['edit']">
+          Edit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

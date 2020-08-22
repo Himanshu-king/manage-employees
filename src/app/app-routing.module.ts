@@ -1,8 +1,10 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { EmployeesListComponent } from "./employees-list/employees-list.component";
-import { EmployeeEditComponent } from "./employee-edit/employee-edit.component";
-import { EmployeeDataResolverService } from "./employee-data-resolver.service";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { EmployeesListComponent } from './employees-list/employees-list.component';
+import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
+import { EmployeeDataResolverService } from './employee-data-resolver.service';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 const routes: Routes = [];
 
@@ -10,15 +12,20 @@ const routes: Routes = [];
   imports: [
     RouterModule.forRoot([
       {
-        path: "list",
+        path: 'list',
         component: EmployeesListComponent,
       },
       {
-        path: ":id/edit",
+        path: ':id/edit',
         component: EmployeeEditComponent,
         resolve: { resolvedData: EmployeeDataResolverService },
       },
-      { path: "", redirectTo: "list", pathMatch: "full" },
+      {
+        path: ':id',
+        component: EmployeeDetailsComponent,
+        resolve: { resolvedData: EmployeeDataResolverService },
+      },
+      { path: '', redirectTo: 'list', pathMatch: 'full' },
     ]),
   ],
   exports: [RouterModule],

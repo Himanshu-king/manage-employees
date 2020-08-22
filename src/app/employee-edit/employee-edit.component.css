@@ -41,8 +41,8 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-  cursor: pointer;
   float: right;
+  margin-right: 1rem;
 }
 
 button[type="submit"]:hover && :not(disabled) {

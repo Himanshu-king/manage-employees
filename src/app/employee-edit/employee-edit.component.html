@@ -1,54 +1,53 @@
 <div class="container wrapper">
   <h2>{{pageTitle}}</h2>
-  <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <form [formGroup]="empForm" *ngIf="empData" (ngSubmit)="onFormSubmit()">
     <div class="flex-table">
-    <div class="row">
-      <div class="col col-25">
-        <label for="name">Name</label>
+      <div class="row">
+        <div class="col col-25">
+          <label for="name">Name</label>
+        </div>
+        <div class="col col-75">
+          <input type="text" id="name" name="name" formControlName="name" placeholder="Your name..">
+        </div>
       </div>
-      <div class="col col-75">
-        <input type="text" id="name" name="name" formControlName="name" placeholder="Your name..">
+      <div class="row">
+        <div class="col col-25">
+          <label for="compName">Company Name</label>
+        </div>
+        <div class="col col-75">
+          <input type="text" id="compName" name="compName" formControlName="compName" placeholder="Your Company name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-25">
+          <label for="emailId">Email Id</label>
+        </div>
+        <div class="col col-75">
+          <input type="text" id="emailId" name="emailId" formControlName="emailId" placeholder="Your Email Id...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-25">
+          <label for="contactNo">Contact No</label>
+        </div>
+        <div class="col col-75">
+          <input type="text" id="contactNo" name="contactNo" formControlName="contactNo"
+            placeholder="Your Contact No...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-25">
+          <label for="designation">Designation</label>
+        </div>
+        <div class="col col-75">
+          <input type="text" id="designation" name="designation" formControlName="designation"
+            placeholder="Your designation.">
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" [disabled]="!empForm.valid || !empForm.dirty" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-danger" [routerLink]="['/']">Cancel</button>
       </div>
     </div>
-    <div class="row">
-      <div class="col col-25">
-        <label for="compName">Company Name</label>
-      </div>
-      <div class="col col-75">
-        <input type="text" id="compName" name="compName" formControlName="compName" placeholder="Your Company name..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-25">
-        <label for="emailId">Email Id</label>
-      </div>
-      <div class="col col-75">
-        <input type="text" id="emailId" name="emailId" formControlName="emailId" placeholder="Your Email Id...">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-25">
-        <label for="contactNo">Contact No</label>
-      </div>
-      <div class="col col-75">
-        <input type="text" id="contactNo" name="contactNo" formControlName="contactNo" placeholder="Your Contact No...">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-25">
-        <label for="designation">Designation</label>
-      </div>
-      <div class="col col-75">
-        <input type="text" id="designation" name="designation" formControlName="designation" placeholder="Your designation.">
-      </div>
-    </div>
-    <div class="row">
-      <button type="submit" [disabled]="!empForm.valid" class="btn btn-success">Submit</button>
-    </div>
-  </div>
   </form>
-
-  {{empForm.value | json}}
-
-  {{empForm.valid}}
 </div>

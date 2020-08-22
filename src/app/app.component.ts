@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
-import { SharedService } from "./shared.service";
+import { Component, OnInit } from '@angular/core';
+import { SharedService } from './shared.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = "Manage-employees";
+  title = 'Manage-employees';
   loading: boolean;
 
   constructor(private router: Router) {
