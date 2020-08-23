@@ -8,6 +8,8 @@
         </div>
         <div class="col col-75">
           <input type="text" id="name" name="name" formControlName="name" placeholder="Your name..">
+          <p *ngIf="empForm.get('name').invalid && (empForm.get('name').dirty || empForm.get('name').touched)"
+            class="alert-danger">Your entry is invalid</p>
         </div>
       </div>
       <div class="row">
@@ -15,7 +17,7 @@
           <label for="compName">Company Name</label>
         </div>
         <div class="col col-75">
-          <input type="text" id="compName" name="compName" formControlName="compName" placeholder="Your Company name..">
+          <input type="text" id="compName" name="compName" formControlName="compName">
         </div>
       </div>
       <div class="row">
@@ -24,6 +26,8 @@
         </div>
         <div class="col col-75">
           <input type="text" id="emailId" name="emailId" formControlName="emailId" placeholder="Your Email Id...">
+          <p *ngIf="empForm.get('emailId').invalid && (empForm.get('emailId').dirty || empForm.get('emailId').touched)"
+            class="alert-danger">Your entry is invalid</p>
         </div>
       </div>
       <div class="row">
@@ -33,6 +37,8 @@
         <div class="col col-75">
           <input type="text" id="contactNo" name="contactNo" formControlName="contactNo"
             placeholder="Your Contact No...">
+          <p *ngIf="empForm.get('contactNo').invalid && (empForm.get('contactNo').dirty || empForm.get('contactNo').touched)"
+            class="alert-danger">Your entry is invalid</p>
         </div>
       </div>
       <div class="row">
@@ -42,6 +48,8 @@
         <div class="col col-75">
           <input type="text" id="designation" name="designation" formControlName="designation"
             placeholder="Your designation.">
+          <p *ngIf="empForm.get('designation').invalid && (empForm.get('designation').dirty || empForm.get('designation').touched)"
+            class="alert-danger">Your entry is invalid</p>
         </div>
       </div>
       <div class="row">

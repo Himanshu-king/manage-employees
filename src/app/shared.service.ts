@@ -73,7 +73,7 @@ export class SharedService {
 
   private initializeEmployee(): any {
     // Return an initialized object
-    return new Employee(null, null, null, null, null, null);
+    return new Employee(null, null, 'Infrrd.ai', null, null, null);
   }
 
   private handleError(err) {

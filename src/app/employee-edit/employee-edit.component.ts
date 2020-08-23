@@ -49,11 +49,11 @@ export class EmployeeEditComponent implements OnInit {
   createEmployeeForm() {
     const { name, compName, emailId, contactNo, designation } = this.empData;
     this.empForm = new FormGroup({
-      name: new FormControl(name, Validators.required),
-      compName: new FormControl(compName, Validators.required),
-      emailId: new FormControl(emailId, Validators.required),
-      contactNo: new FormControl(contactNo, Validators.required),
-      designation: new FormControl(designation, Validators.required),
+      name: new FormControl(name, [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+      compName: new FormControl({value: compName, disabled: true}, Validators.required),
+      emailId: new FormControl(emailId, [Validators.required, Validators.email]),
+      contactNo: new FormControl(contactNo, [Validators.required, Validators.pattern('[0-9]{10}')]),
+      designation: new FormControl(designation, [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
     });
   }
 

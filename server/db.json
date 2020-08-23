@@ -2,7 +2,7 @@
   "employees": [
     {
       "name": "HIMANSHU SINGH",
-      "compName": "Mindtree Ltd",
+      "compName": "Infrrd.ai",
       "emailId": "himanshu1195@gmail.com",
       "contactNo": "9038727025",
       "designation": "SSE",
@@ -10,8 +10,40 @@
     },
     {
       "name": "Sudhanshu Singh",
-      "compName": "Cognizant",
+      "compName": "Infrrd.ai",
       "emailId": "sud.is..back@gmail.com",
+      "contactNo": "9038727025",
+      "designation": "SSE",
+      "id": 2
+    },
+    {
+      "name": "Shashi Singh",
+      "compName": "Infrrd.ai",
+      "emailId": "shashi.back@gmail.com",
+      "contactNo": "9038727025",
+      "designation": "SSE",
+      "id": 2
+    },
+    {
+      "name": "Deepak Singh",
+      "compName": "Infrrd.ai",
+      "emailId": "Deepakk@gmail.com",
+      "contactNo": "9038727025",
+      "designation": "SSE",
+      "id": 2
+    },
+    {
+      "name": "Vivek Singh",
+      "compName": "Infrrd.ai",
+      "emailId": "Vivek.singh@gmail.com",
+      "contactNo": "9038727025",
+      "designation": "SSE",
+      "id": 2
+    },
+    {
+      "name": "Sanjay Singh",
+      "compName": "Infrrd.ai",
+      "emailId": "sanjayback@gmail.com",
       "contactNo": "9038727025",
       "designation": "SSE",
       "id": 2
